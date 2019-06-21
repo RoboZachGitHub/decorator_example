@@ -37,7 +37,7 @@ def test_origin(a, b):
 
     
 def test_data_validity(func):
-    print func.__name__
+    print "decorating" + func.__name__ + "with a data validity test"
     def aux(*args):
         tests_list = [test_number(*args), test_origin(*args)]
         if all(tests_list):
@@ -48,7 +48,6 @@ def test_data_validity(func):
 
 @test_data_validity
 def mean_w_displacement(w_list_A, w_list_B): 
-    print "in mean"
     # typically w_list_A is a reference to test against ideality
     # this function return the total displacement of x,y,z coordinates in Angstroms
     d_sqrts_list = []

@@ -37,7 +37,7 @@ def test_origin(a, b):
 
     
 def test_data_validity(func):
-    print "decorating" + func.__name__ + "with a data validity test"
+    print "decorating " + func.__name__ + " with a data validity test"
     def aux(*args):
         tests_list = [test_number(*args), test_origin(*args)]
         if all(tests_list):
